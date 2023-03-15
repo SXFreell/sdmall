@@ -1,0 +1,12 @@
+<view class="goods">
+    <image src="{{img}}" mode="widthFix" />
+    <view class="inner">
+        <view class="goods_title">{{name}}</view>
+        <view class="brief">{{brief}}</view>
+        <view class="price_out">
+            <view class="price">{{price}}元</view>
+            <image mode="widthFix" src="./jrgwc.png" bind:tap="cart" />
+        </view>
+    </view>
+    <view class="line"></view>
+</view>

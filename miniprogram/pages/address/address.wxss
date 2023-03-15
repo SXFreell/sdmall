@@ -1,0 +1,92 @@
+page {
+  height: 100%;
+}
+.bottom {
+  width: 100%;
+  background-color: #fff;
+  align-items: center;
+  padding-top: 8px;
+}
+.bottom button {
+  width: auto;
+  margin: 0 16px 0 16px;
+}
+.mainAddress {
+  overflow: scroll;
+}
+.mainAddress .nothing {
+  font-size: 14px;
+  color: rosybrown;
+  padding-top: 36px;
+  text-align: center;
+}
+.mainAddress .swipe-inner {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 8px 16px 8px 16px;
+  margin: 8px 8px 4px 8px;
+  display: flex;
+  align-items: center;
+}
+.mainAddress .swipe-inner .left {
+  margin-right: auto;
+}
+.mainAddress .swipe-inner .left .PCCAdefault {
+  display: flex;
+  align-items: center;
+}
+.mainAddress .swipe-inner .left .PCCAdefault .tag {
+  background-color: #f2280c;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 10px;
+  padding: 0 3px 0 3px;
+  line-height: 15px;
+  margin-right: 4px;
+}
+.mainAddress .swipe-inner .left .PCCAdefault .PCC {
+  color: #7e7e7e;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mainAddress .swipe-inner .left .detailAddress {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+}
+.mainAddress .swipe-inner .left .nameAphone {
+  display: flex;
+  font-size: 13px;
+  color: #7e7e7e;
+  align-items: center;
+}
+.mainAddress .swipe-inner .left .nameAphone .sex {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+.mainAddress .swipe-inner .left .nameAphone .name {
+  width: 88px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mainAddress .swipe-inner .right image {
+  margin-left: 16px;
+  width: 17px;
+}
+.mainAddress .van-swipe-cell__right image {
+  margin-left: 6px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #ee0a24;
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  width: 28px;
+}

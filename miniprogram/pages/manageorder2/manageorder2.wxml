@@ -1,0 +1,59 @@
+<!-- XuShuoYYDS -->
+<van-tabs active="{{ active }}" bind:change="onChange">
+    <van-tab title="待收货" name="待收货">
+    </van-tab>
+    <van-tab title="取消中" name="取消中">
+    </van-tab>
+    <van-tab title="已取消" name="已取消"></van-tab>
+    <van-tab title="已完成" name="已完成"></van-tab>
+    <van-tab title="全部订单" name="全部订单"></van-tab>
+</van-tabs>
+
+<view class="inner">
+    <view class="detail" wx:for="{{allOrder}}" wx:for-item="orderitem" wx:key="index" wx:if="{{orderitem.state==active || active=='全部订单'}}">
+        <view class="title">
+            <view class="left">订单号: {{orderitem.orderid}}</view>
+            <view class="right">{{orderitem.state}}</view>
+        </view>
+        <view class="products">
+            <view class="product" wx:for="{{orderitem.goodslist}}" wx:key="index">
+                <image src="{{item.files[0].url}}" mode="widthFix"></image>
+                <text class="goodname"><text>{{item.code}}</text>{{item.detail}}</text>
+                <view class="pricenum">
+                    <text class="price">￥{{item.price}}\n</text>
+                    <text class="num">×{{orderitem.goodnum[item.code]}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="otherinfo">
+            <view class="arow">
+                <view class="left">总金额: </view>
+                <view class="right">{{orderitem.totalmoney}}元</view>
+            </view>
+            <view class="arow">
+                <view class="left">收货人: </view>
+                <view class="right">{{orderitem.address['name']}}</view>
+            </view>
+            <view class="arow">
+                <view class="left">手机号: </view>
+                <view class="right">{{orderitem.address['phone']}}</view>
+            </view>
+            <view class="arow">
+                <view class="left">下单时间: </view>
+                <view class="right">{{orderitem.time}}</view>
+            </view>
+            <view class="arow">
+                <view class="left">收货地址: </view>
+                <view class="right">{{orderitem.address['PCC']+' '+orderitem.address['detailAddress']}}</view>
+            </view>
+        </view>
+        <view class="edit">
+            <view class="button" bindtap="changeOrder" data-index="{{index}}">更新状态</view>
+        </view>
+    </view>
+    <view style="text-align: center;opacity: 0;">XDMall</view>
+</view>
+
+<van-popup show="{{ show }}" round position="bottom" custom-style="height: 30%" bind:close="onClose">
+    <van-picker show-toolbar title="更新状态" columns="{{ columns }}" bind:cancel="onCancel" bind:confirm="confirmChange" />
+</van-popup>

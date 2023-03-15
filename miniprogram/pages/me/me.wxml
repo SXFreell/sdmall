@@ -1,0 +1,114 @@
+<!-- 阴影 -->
+<view class="shadowTaB" />
+
+<!-- 顶部区域 -->
+<view class="mineTop">
+    <!-- 顶部占位区 -->
+    <view class="zhanWei" style="width: 100%; height: {{SystemInfo.statusBarHeight}}px;"></view>
+    <!-- 标题 -->
+    <view class="title">个人中心</view>
+    <!-- 个人信息 -->
+    <view class="mine">
+        <view class="avatar">
+            <image src='{{user.avatar}}' mode="widthFix" />
+        </view>
+        <view class="detail">
+            <text class="name">{{user.nickName}}</text>
+            <view class="edit" bindtap="toEditMe">
+                <view class="arrow"></view>修改信息
+            </view>
+        </view>
+    </view>
+    <!-- 底部占位区 -->
+    <view class="zhanWei" style="width: 100%; height: 28px;"></view>
+</view>
+
+
+<!-- 底部菜单区 -->
+<view class="mineMain" style="height: {{SystemInfo.windowHeight-SystemInfo.statusBarHeight-140}}px;">
+    <!-- 主按钮区域 -->
+    <view class="mainButton">
+        <view class="mB" bindtap="dsh">
+            <image mode="heightFix" src="../img/dsh.png" /><text>待收货</text>
+        </view>
+        <view class="mB" bindtap="qxz">
+            <image mode="heightFix" src="../img/dzf.png" /><text>取消中</text>
+        </view>
+        <view class="mB" bindtap="ywc">
+            <image mode="heightFix" src="../img/ywc.png" /><text>已完成</text>
+        </view>
+        <view class="mB" bindtap="allorder">
+            <image mode="heightFix" src="../img/qbdd.png" /><text>全部订单</text>
+        </view>
+    </view>
+    <!-- 下方列表 -->
+    <mp-cells ext-class="cells">
+        <!-- <mp-cell hover link url="../myCollection/myCollection" value="我的收藏"> -->
+        <mp-cell value="我的收藏" footer="功能测试中">
+            <image slot="icon" src="../img/sc.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+        <mp-cell value="优惠券" footer="暂未开放">
+            <image slot="icon" src="../img/yhq.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+        <mp-cell value="红包" footer="暂未开放">
+            <image slot="icon" src="../img/hb.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+        <mp-cell wx-if="{{user.userClass === 'admin'}}" hover link url="../admin/admin" value="管理">
+            <image slot="icon" src="../img/gl.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </mp-cell>
+    </mp-cells>
+</view>
+
+<!-- <view class="head" style="top: {{navHeight}}px;">
+  <view class="user">
+    <open-data type="userAvatarUrl" mode="aspectFit" class="img"></open-data>
+    <open-data type="userNickName" lang="zh_CN" class="name"></open-data>
+  </view>
+  <view class="classify">
+    <view class="body">
+      <image src="../img/dzf.png"></image>
+      <text>待支付</text>
+    </view>
+    <view class="body" bindtap="toOrder" data-name="待收货">
+      <image src="../img/dsh.png"></image>
+      <text>待收货</text>
+    </view>
+    <view class="body" bindtap="toOrder" data-name="已完成">
+      <image src="../img/ywc.png"></image>
+      <text>已完成</text>
+    </view>
+    <view class="body" bindtap="toOrder" data-name="全部订单">
+      <image src="../img/qbdd.png"></image>
+      <text>全部订单</text>
+    </view>
+  </view>
+</view>
+<view class="container">
+  <view class="text_left">
+    <text class="text_left_top">0</text>
+    <text class="text_left_bottom">优惠卷</text>
+  </view>
+  <view class="text_right">
+    <text class="text_left_top">0</text>
+    <text class="text_left_bottom">积分</text>
+  </view>
+</view>
+<image src="../images/banner.jpg" mode="widthFix" class="poster"></image>
+<view class="menu">
+  <view class="menu_body" bindtap="goToCollection">
+    <image src="../img/shoucang.png"></image>
+    <text>我的收藏</text>
+  </view>
+  <view class="menu_body" bindtap="admin">
+    <image src="../img/houtaiguanli.png"></image>
+    <text>后台管理</text>
+  </view>
+  <view class="menu_body"  bindtap="clearst">
+    <image src="../img/shoucang.png"></image>
+    <text>测试</text>
+  </view>
+  <view class="menu_body"  bindtap="gototest">
+    <image src="../img/shoucang.png"></image>
+    <text>测试</text>
+  </view>
+</view> -->

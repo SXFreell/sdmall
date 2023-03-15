@@ -1,0 +1,16 @@
+.edit {
+  padding-top: 16px;
+}
+.edit .touxiang .van-cell__value {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+}
+.edit .touxiang image {
+  width: 60px;
+  border-radius: 50%;
+}
+.edit .button {
+  padding: 20px;
+}

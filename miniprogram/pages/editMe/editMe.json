@@ -1,0 +1,12 @@
+{
+    "navigationBarTitleText":"修改个人信息", 
+    "navigationBarBackgroundColor": "#e64e43",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "van-cell": "/vant/miniprogram_npm/@vant/weapp/cell/index",
+        "van-cell-group": "/vant/miniprogram_npm/@vant/weapp/cell-group/index",
+        "van-field": "/vant/miniprogram_npm/@vant/weapp/field/index",
+        "mp-toptips": "weui-miniprogram/toptips/toptips"
+    },
+    "style": "v2"
+}

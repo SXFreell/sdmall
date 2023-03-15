@@ -1,0 +1,106 @@
+<!-- 主标签 -->
+<view class="addMain">
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <mp-form-page title="商品信息录入">
+        <mp-form id="form" rules="{{rules}}">
+            <mp-cells>
+                <label>
+                    <mp-cell prop="name" title="商品名称" ext-class="">
+                        <input value="{{name}}" bindinput="formInputChange" data-field="name" class="weui-input" placeholder="请输入商品名称" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell ext-class="weui-cell_select weui-cell_select-after">
+                        <view slot="title" class="weui-label">商品分类</view>
+                        <picker bindchange="bindClassifyChange" value="{{classifyIndex}}" range="{{classifyList}}">
+                            <view class="weui-select">{{classifyList[classifyIndex]}}</view>
+                        </picker>
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell prop="price" title="商品售价" ext-class="">
+                        <input value="{{price}}" bindinput="formInputChange" data-field="price" class="weui-input" type="digit" placeholder="请输入商品售价" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell prop="oneprice" title="商品进价" ext-class="">
+                        <input value="{{oneprice}}" bindinput="formInputChange" data-field="oneprice" class="weui-input" type="digit" placeholder="请输入商品进价" />
+                    </mp-cell>
+                </label>
+                <!-- <label>
+                    <mp-cell prop="brief" title="商品简介" ext-class="">
+                        <input value="{{brief}}" bindinput="formInputChange" data-field="brief" class="weui-input" placeholder="请输入商品简介" />
+                    </mp-cell>
+                </label> -->
+                <label>
+                    <mp-cell prop="detail" title="商品描述" ext-class="">
+                        <textarea value="{{detail}}" bindblur="formInputChange" data-field="detail" class="weui-input" auto-height placeholder="请输入商品详细信息" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell title="是否上架" ext-class="">
+                        <switch slot="footer" bindchange="shangJiaChange" checked="{{shangJia}}" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell title="是否推荐" ext-class="">
+                        <switch slot="footer" bindchange="tuiJianChange" checked="{{tuiJian}}" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell class="uploadImg">
+                        <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}" files="{{files}}" max-count="3" title="上传商品图片" tips="第一张为商品封面 {{imgLoading}}"></mp-uploader>
+                    </mp-cell>
+                </label>
+            </mp-cells>
+        </mp-form>
+
+        <view slot="button">
+            <button class="weui-btn" type="primary" bindtap="submitForm">录入商品</button>
+            <button class="weui-btn" type="default" bindtap="resetForm">重置表单</button>
+            <!-- <button class="weui-btn" type="default" bindtap="test">ceshi</button> -->
+        </view>
+    </mp-form-page>
+</view>
+
+<!-- <view class="content">
+    <view class="body">
+        <text>商品名称:</text>
+        <input bindinput="getName" value="{{name}}" />
+    </view>
+    <view class="body">
+        <text>商品分类:</text>
+        <radio-group bindchange="getClassify">
+            <radio wx:for="{{classifyObject}}" value="{{item.name}}" checked="{{item.checked}}">{{item.name}}</radio>
+        </radio-group>
+    </view>
+    <view class="body">
+        <text>商品价格:</text>
+        <input bindinput="getPrice" value="{{price}}" />
+    </view>
+    <view class="body">
+        <text>商品描述:</text>
+        <input bindinput="getDetail" value="{{detail}}" />
+    </view>
+    <view class="body">
+        <text>商品库存:</text>
+        <input bindinput="getStock" />
+    </view>
+    <view class="body">
+        <text>是否推荐:</text>
+        <radio-group bindchange="isRecommend">
+            <radio wx:for="{{recommendObject}}" value="{{item.name}}" checked="{{item.checked}}">{{item.name}}</radio>
+        </radio-group>
+    </view>
+    <view class="body">
+        <text>商品图片大:</text>
+        <input bindinput="getPicbig" value="{{picbig}}" />
+    </view>
+
+    <view class="body">
+        <text>商品图片小:</text>
+        <input bindinput="getPicsmall" value="{{picsmall}}" />
+    </view>
+
+    <button style="margin-top:30rpx;background-color:#00f;color:#fff;width:70%;margin-bottom:30rpx" bindtap="submit">提交</button>
+</view> -->

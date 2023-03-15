@@ -1,0 +1,18 @@
+{
+    "navigationBarTitleText": "管理商品",
+    "navigationBarBackgroundColor": "#e64e43",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "mp-loading": "weui-miniprogram/loading/loading",
+        "van-popup": "/vant/miniprogram_npm/@vant/weapp/popup/index",
+        "mp-uploader": "weui-miniprogram/uploader/uploader",
+        "mp-form-page": "weui-miniprogram/form-page/form-page",
+        "mp-form": "weui-miniprogram/form/form",
+        "mp-toptips": "weui-miniprogram/toptips/toptips",
+        "mp-cells": "weui-miniprogram/cells/cells",
+        "mp-cell": "weui-miniprogram/cell/cell",
+        "mp-checkbox": "weui-miniprogram/checkbox/checkbox",
+        "mp-checkbox-group": "weui-miniprogram/checkbox-group/checkbox-group"
+    },
+    "style": "v2"
+}

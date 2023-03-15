@@ -1,0 +1,66 @@
+{
+    "useExtendedLib": {
+        "weui": true
+    },
+    "pages": [
+        "pages/login/login",
+        "pages/index/index",
+        "pages/classify/classify",
+        "pages/shopping/shopping",
+        "pages/me/me",
+        "pages/recommend/recommend",
+        "pages/address/address",
+        "pages/address_detail/address_detail",
+        "pages/myCollection/myCollection",
+        "pages/shop_order/shop_order",
+        "pages/myOrder/myOrder",
+        "pages/admin/admin",
+        "pages/addProduct/addProduct",
+        "pages/manageProduct/manageProduct",
+        "pages/manageorder/manageorder",
+        "pages/manageorder2/manageorder2",
+        "pages/editMe/editMe",
+        "pages/manageClassify/manageClassify",
+        "pages/payit/payit"
+    ],
+    "window": {
+        "backgroundColor": "#fff",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "石油大学迅达商城",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "tabbar/home.png",
+                "selectedIconPath": "tabbar/homeS.png"
+            },
+            {
+                "pagePath": "pages/classify/classify",
+                "text": "分类",
+                "iconPath": "tabbar/collection.png",
+                "selectedIconPath": "tabbar/collectionS.png"
+            },
+            {
+                "pagePath": "pages/shopping/shopping",
+                "text": "购物车",
+                "iconPath": "tabbar/shopping-bag.png",
+                "selectedIconPath": "tabbar/shopping-bagS.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "个人中心",
+                "iconPath": "tabbar/mine.png",
+                "selectedIconPath": "tabbar/mineS.png"
+            }
+        ],
+        "backgroundColor": "white",
+        "color": "#000000",
+        "selectedColor": "#E18E35",
+        "borderStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json"
+}

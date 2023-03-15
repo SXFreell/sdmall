@@ -1,0 +1,21 @@
+
+
+<view class="body">
+  <view class="product" wx:for="{{orderlist}}" wx:for-index="idx" wx:key="index">
+       <view class="middle">
+      <text class="text_bottom">NO{{idx+1}}:{{item.id}}</text>
+      <text class="text_bottom">收货地址：{{item.address.address}}</text> <text class="text_bottom">收货人：{{item.address.name}}</text>
+      <text class="text_bottom">手机：{{item.address.mobilephone}}</text>
+      <text class="text_bottom">座机：{{item.address.phone}}</text>
+      <text class="text_middle">订单金额：￥{{item.allMoney}}</text>
+      <text>时间：{{item.time}}</text>
+          <view wx:for="{{item.product}}" wx:for-item="items">--
+{{items.goods_name}}
+<text class="text_bottom">数量：{{items.goods_number}}</text>
+</view>
+<view class="bottom_right" bindtap="songhuo"   data-id="{{item._id}}">去送货</view>
+<image src="../images/xian.jpg"  mode="widthFix"></image>
+    </view>
+    
+  </view>
+</view>

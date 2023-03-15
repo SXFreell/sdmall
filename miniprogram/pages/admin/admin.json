@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText":"商城管理", 
+    "navigationBarBackgroundColor": "#e64e43",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "mp-cells": "weui-miniprogram/cells/cells",
+        "mp-cell": "weui-miniprogram/cell/cell"
+    }
+}

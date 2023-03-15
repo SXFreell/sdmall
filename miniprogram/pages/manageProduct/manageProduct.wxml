@@ -1,0 +1,122 @@
+<!-- XuShuoYYDS -->
+
+<mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+<view class="products">
+    <view class="card" wx:for="{{goodList}}" wx:key="index">
+        <view class="head">
+            <view class="left">
+                <image mode="heightFix" src="{{item.files[0].url}}"></image>
+            </view>
+            <view class="right">
+                <view class="name">{{item.name}}</view>
+                <view class="brief">{{item.detail}}</view>
+            </view>
+        </view>
+        <view class="content">
+            <view class="row">
+                <view class="left">商品编号：<font style="font-weight: bold;color: blue;">{{item.code}}</font>
+                </view>
+                <view class="right">进价：{{item.oneprice}}</view>
+            </view>
+            <view class="row">
+                <view class="left">分类：{{classifyDict[item.classification]}}</view>
+                <view class="right">售价：{{item.price}}</view>
+            </view>
+            <view class="row">
+                <view class="left">是否推荐：{{item.tuiJian===true?"推荐":"未推荐"}}</view>
+            </view>
+            <view class="row">
+                <view class="left">是否上架：<font style="font-weight: bold;color: {{item.shangJia===true?'blue':'red'}};">{{item.shangJia===true?"已上架":"未上架"}}</font>
+                </view>
+            </view>
+        </view>
+        <view class="edit">
+            <button class="mini-btn" data-index="{{index}}" type="primary" size="mini" bindtap="edit">编辑商品</button>
+        </view>
+    </view>
+    <mp-loading type="circle" show="{{showLoading}}"></mp-loading>
+    <view class="weui-loadmore weui-loadmore_line" wx:if="{{goodNow === goodTotal}}">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line" style="background-color: #f1f2f6;">下面没有喽</view>
+    </view>
+</view>
+
+<!-- 弹出层 -->
+<van-popup show="{{ show }}" round position="bottom" closeable="true" custom-style="height: 80%" bind:close="onClose">
+    <view class="pop_inner">
+        <mp-form-page title="商品编号：{{Pcode}}">
+            <mp-form id="form" rules="{{rules}}">
+                <mp-cells>
+                    <label>
+                        <mp-cell prop="Pname" title="商品名称" ext-class="">
+                            <input value="{{Pname}}" bindinput="formInputChange" data-field="Pname" class="weui-input" placeholder="请输入商品名称" />
+                        </mp-cell>
+                    </label>
+                    <label>
+                        <mp-cell ext-class="weui-cell_select weui-cell_select-after">
+                            <view slot="title" class="weui-label">商品分类</view>
+                            <picker bindchange="bindClassifyChange" value="{{classifyIndex}}" range="{{classifyList}}">
+                                <view class="weui-select">{{classifyList[classifyIndex]}}</view>
+                            </picker>
+                        </mp-cell>
+                    </label>
+                    <label>
+                        <mp-cell prop="Pprice" title="商品售价" ext-class="">
+                            <input value="{{Pprice}}" bindinput="formInputChange" data-field="Pprice" class="weui-input" type="digit" placeholder="请输入商品售价" />
+                        </mp-cell>
+                    </label>
+                    <label>
+                        <mp-cell prop="Poneprice" title="商品进价" ext-class="">
+                            <input value="{{Poneprice}}" bindinput="formInputChange" data-field="Poneprice" class="weui-input" type="digit" placeholder="请输入商品进价" />
+                        </mp-cell>
+                    </label>
+                    <!-- <label>
+                        <mp-cell prop="brief" title="商品简介" ext-class="">
+                            <input value="{{brief}}" bindinput="formInputChange" data-field="brief" class="weui-input" placeholder="请输入商品简介" />
+                        </mp-cell>
+                    </label> -->
+                    <label>
+                        <mp-cell prop="Pdetail" title="商品描述" ext-class="">
+                            <textarea value="{{Pdetail}}" bindblur="formInputChange" data-field="Pdetail" class="weui-input" auto-height placeholder="请输入商品详细信息" />
+                        </mp-cell>
+                    </label>
+                    <label>
+                        <mp-cell title="是否上架" ext-class="">
+                            <switch slot="footer" bindchange="shangJiaChange" checked="{{PshangJia}}" />
+                        </mp-cell>
+                    </label>
+                    <label>
+                        <mp-cell title="是否推荐" ext-class="">
+                            <switch slot="footer" bindchange="tuiJianChange" checked="{{PtuiJian}}" />
+                        </mp-cell>
+                    </label>
+                    <label>
+                        <mp-cell class="uploadImg">
+                            <mp-uploader bindfail="uploadError" bindsuccess="uploadSuccess" select="{{selectFile}}" upload="{{uplaodFile}}" files="{{Pfiles}}" max-count="3" title="上传商品图片" tips="第一张为商品封面 {{imgLoading}}"></mp-uploader>
+                        </mp-cell>
+                    </label>
+                </mp-cells>
+            </mp-form>
+
+            <view slot="button">
+                <button class="weui-btn" type="primary" bindtap="submitForm">修改商品</button>
+                <button class="weui-btn" type="default" bindtap="onClose">取消编辑</button>
+                <!-- <button class="weui-btn" type="default" bindtap="test">ceshi</button> -->
+            </view>
+        </mp-form-page>
+    </view>
+</van-popup>
+
+
+<!-- <view class="product" wx:for="{{product}}" wx:key="index">
+  <image src="../images/{{item.limg}}"></image>
+  <view class="text">
+    <text>{{item.name}}</text>
+    <text>{{item.ms}}</text>
+    <text>￥{{item.saleprice}}</text>
+  </view>
+  <view class="button">
+    <button data-id="{{item._id}}" data-fileID="{{item.img_src}}" bindtap="delete"  size="mini" style="background-color:#f00;">删除</button>
+    <button data-id="{{item._id}}" data-fileID="{{item.img_src}}" bindtap="update"  size="mini" style="background-color:#0f0;">修改</button>
+  </view>
+</view> -->

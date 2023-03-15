@@ -1,0 +1,18 @@
+{
+    "navigationBarTitleText": "编辑收货地址",
+    "navigationBarBackgroundColor": "#e64e43",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "van-cell": "/vant/miniprogram_npm/@vant/weapp/cell/index",
+        "van-cell-group": "/vant/miniprogram_npm/@vant/weapp/cell-group/index",
+        "van-field": "/vant/miniprogram_npm/@vant/weapp/field/index",
+        "mp-toptips": "weui-miniprogram/toptips/toptips",
+        "van-area": "/vant/miniprogram_npm/@vant/weapp/area/index",
+        "van-popup": "/vant/miniprogram_npm/@vant/weapp/popup/index",
+        "van-icon": "/vant/miniprogram_npm/@vant/weapp/icon/index",
+        "van-radio": "/vant/miniprogram_npm/@vant/weapp/radio/index",
+        "van-radio-group": "/vant/miniprogram_npm/@vant/weapp/radio-group/index",
+        "van-switch": "/vant/miniprogram_npm/@vant/weapp/switch/index"
+    },
+    "style": "v2"
+}

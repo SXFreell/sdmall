@@ -1,0 +1,124 @@
+page {
+    height: 100%;
+}
+
+.shadowTaB {
+    z-index: 3;
+}
+
+.cartBottom {
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    .selectAll {
+        margin-left: 16px;
+        margin-right: auto;
+        .van-checkbox {
+            .van-checkbox__label {
+                padding-left: 6px;
+            }
+        }
+    }
+    .money {
+        font-size: 14px;
+        margin-right: 16px;
+        color: #e18e35;
+    }
+    .getIt {
+        display: flex;
+        .right {
+            background-color: #07c160;
+            color: #fff;
+            padding: 2px 12px 2px 8px;
+            border-radius: 0 18px 18px 0;
+            margin-right: 16px;
+        }
+        .right:active {
+            background-color: rgb(6, 173, 86);
+        }
+        .left {
+            background-color: #ee0a24;
+            color: #fff;
+            padding: 2px 8px 2px 12px;
+            border-radius: 18px 0 0 18px;
+        }
+        .left:active {
+            background-color: #cc0a21;
+        }
+    }
+    
+}
+
+.mainCart {
+    overflow: scroll;
+    .nothing {
+        font-size: 14px;
+        color: rosybrown;
+        padding-top: 36px;
+        text-align: center;
+    }
+    .van-checkbox-group {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        .swipe-inner {
+            padding: 8px;
+            margin: 8px;
+            border-radius: 8px;
+            background-color: #fff;
+            .van-checkbox__label {
+                flex-grow: 1;
+            }
+            .checkboxInner {
+                display: flex;
+                width: 100%;
+                image {
+                    height: 86px;
+                    min-width: 86px;
+                }
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 8px;
+                    flex-grow: 1;
+                    .title {
+                        font-weight: bold;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        margin-bottom: auto;
+                    }
+                    .priceAnumber {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        .price {
+                            font {
+                                font-size: 12px;
+                                font-weight: bold;
+                            }
+                            font-size: 17px;
+                            color: #fc5000;
+                            margin-right: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .van-swipe-cell__right {
+            image {
+                margin-left: 6px;
+                padding: 10px;
+                border-radius: 50%;
+                background-color: #ee0a24;
+                position: absolute;
+                transform: translate(0,-50%);
+                top: 50%;
+                width: 28px;
+            }
+        }
+    }
+}

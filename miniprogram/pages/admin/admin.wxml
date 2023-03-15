@@ -1,0 +1,40 @@
+<mp-cells ext-class="cells" title="管理菜单">
+    <mp-cell hover link url="../addProduct/addProduct" value="增加商品">
+        <image slot="icon" src="./img/zjsp.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </mp-cell>
+    <mp-cell hover link url="../manageProduct/manageProduct" value="管理商品">
+        <image slot="icon" src="./img/glsp.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </mp-cell>
+    <mp-cell hover link url="../manageClassify/manageClassify" value="管理分类">
+        <image slot="icon" src="./img/glfl.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </mp-cell>
+    <!-- <mp-cell hover link url="../manageorder/manageorder" value="查看订单">
+        <image slot="icon" src="./img/ckdd.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </mp-cell> -->
+    <mp-cell hover link url="../manageorder2/manageorder2" value="管理订单">
+        <image slot="icon" src="./img/gldd.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </mp-cell>
+</mp-cells>
+
+<!-- <view class="content">
+  <view class="body" bindtap="addProduct">
+  <image src="./img/zjsp.png"></image>
+  <text>增加商品</text>
+  </view>
+  <view class="body" bindtap="manageProduct">
+    <image src="./img/glsp.png"></image>
+    <text>管理商品</text>
+   </view>
+</view>
+
+<view class="content">
+    <view class="body" bindtap="manageorder">
+    <image src="./img/ckdd.png"></image>
+    <text>查看订单</text>
+  </view>
+
+  <view class="body" bindtap="manageorder2">
+    <image src="./img/gldd.png"></image>
+    <text>管理订单</text>
+  </view>
+</view> -->

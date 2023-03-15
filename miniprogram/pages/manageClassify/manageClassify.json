@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText":"管理分类", 
+    "navigationBarBackgroundColor": "#e64e43",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "van-checkbox": "/vant/miniprogram_npm/@vant/weapp/checkbox/index",
+        "van-checkbox-group": "/vant/miniprogram_npm/@vant/weapp/checkbox-group/index"
+    },
+    "style": "v2"
+}

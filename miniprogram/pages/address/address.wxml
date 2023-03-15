@@ -1,0 +1,39 @@
+<!-- 地址列表 -->
+<view class="mainAddress" style="height: {{SystemInfo.windowHeight - (SystemInfo.screenHeight - SystemInfo.safeArea.bottom + 58)}}px;">
+    <view wx:if="{{addressList.length===0}}" class="nothing">没有收货地址...</view>
+    <van-swipe-cell wx:for="{{addressList}}" wx:key="index" right-width="{{ 68 }}">
+        <view class="swipe-inner">
+            <view class="left">
+                <view class="PCCAdefault">
+                    <view class="tag" wx:if="{{item.default}}">默认</view>
+                    <view class="PCC">
+                        {{item.PCC}}
+                    </view>
+                </view>
+                <view class="detailAddress">
+                    {{item.detailAddress}}
+                </view>
+                <view class="nameAphone">
+                    <view class="sex" style="background-color: {{item.sex === '男' ? '#2196f3' : '#e91e63'}};"></view>
+                    <view class="name">
+                        {{item.name}}
+                    </view>
+                    <view class="phone">
+                        {{item.phone}}
+                    </view>
+                </view>
+            </view>
+            <view class="right">
+                <image mode="widthFix" data-index="{{index}}" bindtap="editAddress" src="../img/xg.png" />
+            </view>
+        </view>
+        <view slot="right">
+            <image data-index="{{index}}" bindtap="deleteAddress" mode="widthFix" src="../img/delete.png"></image>
+        </view>
+    </van-swipe-cell>
+</view>
+
+<!-- 底部按钮 -->
+<view class="bottom" style="height: {{SystemInfo.screenHeight - SystemInfo.safeArea.bottom + 48}}px;">
+    <button type="primary" bindtap="newAddress">+ 添加收货地址</button>
+</view>

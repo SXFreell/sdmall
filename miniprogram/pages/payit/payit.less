@@ -1,0 +1,191 @@
+.address {
+    margin: 16px 16px 12px 16px;
+    padding: 8px 8px 8px 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+    image {
+        width: 16%;
+    }
+
+    .detailaddress {
+        width: 84%;
+        font-size: 18px;
+        font-weight: bold;
+
+        .name {
+            font-size: 16px;
+            font-weight: normal;
+
+            .phone {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.detail {
+    margin: 12px 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 8px 0;
+
+    .title {
+        font-size: 16px;
+        margin: 0 12px;
+        padding: 4px 0;
+        border-bottom: #ccc solid 1px;
+    }
+
+    .products {
+        margin: 0 12px;
+        border-bottom: #ccc solid 1px;
+
+        .product {
+            margin: 16px 0;
+            display: flex;
+
+            image {
+                width: 20%;
+            }
+
+            .goodname {
+                width: 60%;
+                margin: 0 2%;
+                font-size: 14px;
+                color: #333;
+            }
+
+            .pricenum {
+                width: 16%;
+                text-align: right;
+
+                .price {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.cartBottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+
+    .money {
+        font-size: 14px;
+        margin-left: 16px;
+        margin-right: auto;
+        color: #e18e35;
+    }
+
+    .getIt {
+        display: flex;
+
+        .right {
+            background-color: #07c160;
+            color: #fff;
+            padding: 2px 12px 2px 12px;
+            border-radius: 18px;
+            margin-right: 16px;
+        }
+
+        .right:active {
+            background-color: rgb(6, 173, 86);
+        }
+    }
+}
+
+.popup {
+    margin: 16px;
+    position: relative;
+    
+    .selectaddress {
+        position: absolute;
+        left: 24px;
+        top: 4px;
+        font-weight: bold;
+    }
+
+    .addressList {
+        padding-top: 36px;
+    }
+
+    .swipe-inner {
+        background-color: #f1f2f6;
+        border-radius: 16px;
+        padding: 8px 16px 8px 16px;
+        margin: 8px 8px 4px 8px;
+        align-items: center;
+        .PCCAdefault {
+            display: flex;
+            align-items: center;
+            .tag {
+                background-color: #f2280c;
+                border-radius: 4px;
+                color: #fff;
+                font-size: 10px;
+                padding: 0 3px 0 3px;
+                line-height: 15px;
+                margin-right: 4px;
+            }
+            .PCC {
+                color: #7e7e7e;
+                font-size: 14px;
+                line-height: 14px;
+                padding: 2px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        .detailAddress {
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: bold;
+        }
+
+        .nameAphone {
+            display: flex;
+            font-size: 13px;
+            color: #7e7e7e;
+            align-items: center;
+
+            .sex {
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                margin-right: 4px;
+            }
+
+            .name {
+                width: 88px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .addressbutton {
+        position: absolute;
+        right: 8px;
+        background-color: #07c160;
+        color: #fff;
+        padding: 2px 12px 2px 12px;
+        border-radius: 18px;
+        font-weight: bold;
+    }
+
+    .addressbutton:active {
+        background-color: rgb(6, 173, 86);
+    }
+}

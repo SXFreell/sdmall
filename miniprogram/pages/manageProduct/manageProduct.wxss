@@ -1,0 +1,68 @@
+.products {
+  padding: 4px 0 64px 0;
+}
+.products .card {
+  margin: 12px 16px;
+  background-color: #fff;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  position: relative;
+}
+.products .card .head {
+  display: flex;
+  height: 72px;
+}
+.products .card .head .left {
+  padding: 6px;
+}
+.products .card .head .left image {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+}
+.products .card .head .right {
+  padding: 6px;
+  line-height: 30px;
+}
+.products .card .head .right .name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.products .card .head .right .brief {
+  font-size: 16px;
+  color: #59595a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.products .card .content {
+  margin-top: 4px;
+  padding: 0 6px 6px 6px;
+}
+.products .card .content .row {
+  display: flex;
+}
+.products .card .content .row .left {
+  width: 50%;
+  margin-right: 8px;
+}
+.products .card .content .row .right {
+  width: 50%;
+}
+.products .card .edit {
+  padding: 4px;
+  position: absolute;
+  right: 16px;
+  bottom: 0;
+}
+.products .card .edit button {
+  background-color: #e85f55;
+}

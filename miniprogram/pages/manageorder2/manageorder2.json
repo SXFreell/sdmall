@@ -1,0 +1,11 @@
+{
+    "navigationBarTitleText": "订单管理",
+    "navigationBarBackgroundColor": "#e64e43",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "van-popup": "/vant/miniprogram_npm/@vant/weapp/popup/index",
+        "van-picker": "/vant/miniprogram_npm/@vant/weapp/picker/index",
+        "van-tab": "/vant/miniprogram_npm/@vant/weapp/tab/index",
+        "van-tabs": "/vant/miniprogram_npm/@vant/weapp/tabs/index"
+    }
+}

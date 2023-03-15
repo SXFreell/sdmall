@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "我的收货地址",
+    "navigationBarBackgroundColor": "#e64e43",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "van-swipe-cell": "/vant/miniprogram_npm/@vant/weapp/swipe-cell/index"
+    },
+    "style": "v2"
+}

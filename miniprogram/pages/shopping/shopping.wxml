@@ -1,0 +1,47 @@
+<!-- 阴影 -->
+<view class="shadowTaB" />
+
+
+<!-- 购物车商品列表 -->
+<view class="mainCart" style="height: {{SystemInfo.windowHeight - 48}}px;">
+    <view wx:if="{{cartList.length===0}}" class="nothing">购物车里面什么都没有...</view>
+    <van-checkbox-group value="{{ result }}" bind:change="onChangeMain">
+        <van-swipe-cell wx:for="{{cartList}}" wx:key="good_id" right-width="{{ 68 }}">
+            <view class="swipe-inner">
+                <van-checkbox checked-color="#07c160" disabled="{{!goodsInfo[item.good_id]['shangJia']}}" name="{{item.good_id}}" label-disabled>
+                    <view class="checkboxInner">
+                        <image mode="heightFix" src="{{goodsInfo[item.good_id]['files'][0]['url']}}"></image>
+                        <view class="right">
+                            <view class="title">
+                                {{goodsInfo[item.good_id].name}}
+                            </view>
+                            <view class="priceAnumber">
+                                <view class="price">
+                                    <font>￥</font>{{!goodsInfo[item.good_id]['shangJia'] ? '已下架' : goodsInfo[item.good_id]['price']}}
+                                </view>
+                                <view class="number">
+                                    <van-stepper value="{{ item.good_num }}" disabled="{{!goodsInfo[item.good_id]['shangJia']}}" data-good="{{item.good_id}}" integer input-width="40" min="1" max="999" bind:change="numChange" />
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </van-checkbox>
+            </view>
+            <view slot="right">
+                <image data-good="{{item}}" bindtap="deleteGood" mode="widthFix" src="../img/delete.png"></image>
+            </view>
+        </van-swipe-cell>
+    </van-checkbox-group>
+</view>
+
+<!-- 购物车底部菜单 -->
+<view class="cartBottom">
+    <view class="selectAll">
+        <van-checkbox value="{{ checkedAll }}" checked-color="#07c160" bind:change="onChangeSA">全选</van-checkbox>
+    </view>
+    <view class="money">合计: {{totalMoney}}元</view>
+    <view class="getIt">
+        <view class="left" bindtap="selectDelete">删除</view>
+        <view class="right" bindtap="payit">结算</view>
+    </view>
+</view>

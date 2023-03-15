@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText":"确认订单", 
+    "navigationBarBackgroundColor": "#e64e43",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "van-field": "/vant/miniprogram_npm/@vant/weapp/field/index",
+        "van-popup": "/vant/miniprogram_npm/@vant/weapp/popup/index",
+        "van-dialog": "/vant/miniprogram_npm/@vant/weapp/dialog/index"
+    }
+}

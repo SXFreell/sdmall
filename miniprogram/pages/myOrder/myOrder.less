@@ -1,0 +1,96 @@
+van-tabs {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.inner {
+    position: relative;
+    top: 44px;
+}
+
+.detail {
+    margin: 12px 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 8px 0;
+
+    .title {
+        font-size: 16px;
+        margin: 0 12px;
+        padding: 4px 0;
+        border-bottom: #ccc solid 1px;
+        display: flex;
+        .left {
+            margin-right: auto;
+        }
+        .right {
+            font-weight: bold;
+        }
+    }
+
+    .products {
+        margin: 0 12px;
+        border-bottom: #ccc solid 1px;
+
+        .product {
+            margin: 16px 0;
+            display: flex;
+
+            image {
+                width: 20%;
+            }
+
+            .goodname {
+                width: 60%;
+                margin: 0 2%;
+                font-size: 14px;
+                color: #333;
+            }
+
+            .pricenum {
+                width: 16%;
+                text-align: right;
+
+                .price {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .otherinfo {
+        margin: 0 12px;
+        font-size: 15px;
+        border-bottom: #ccc solid 1px;
+        .arow {
+            display: flex;
+            .left {
+                text-align: justify;
+                text-align-last:justify;
+                min-width: 64px;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .edit {
+        margin: 0 12px;
+        .button {
+            text-align: center;
+            width: 60px;
+            margin-top: 6px;
+            margin-left: auto;
+            background-color: #ee0a24;
+            color: #fff;
+            font-size: 14px;
+            padding: 2px 12px 2px 12px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+    
+        .button:active {
+            background-color: #f13b50;
+        }
+    }
+}

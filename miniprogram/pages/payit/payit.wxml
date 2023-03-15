@@ -1,0 +1,74 @@
+<!--XuShuoYYDS-->
+
+<view class="address" bindtap="editaddress">
+    <image src="./dizhi.png" mode="widthFix"></image>
+    <text class="detailaddress" wx:if="{{!addressList[address]}}">请填写收货信息</text>
+    <text class="detailaddress" wx:else>{{addressList[address]['PCC']+' '+addressList[address]['detailAddress']}}\n<text class="name">{{addressList[address]['name']}} <text class="phone">{{addressList[address]['phone']}}</text></text></text>
+</view>
+
+<view class="detail" style="margin-bottom: {{SystemInfo.screenHeight-SystemInfo.safeArea.bottom+64}}px;">
+    <view class="title">订单号: {{orderid}}</view>
+    <view class="products">
+        <view class="product" wx:for="{{goodslist}}" wx:key="index">
+            <image src="{{item.files[0].url}}" mode="widthFix"></image>
+            <text class="goodname">{{item.detail}}</text>
+            <view class="pricenum">
+                <text class="price">￥{{item.price}}\n</text>
+                <text class="num">×{{paylist[item.code]}}</text>
+            </view>
+        </view>
+    </view>
+    <van-field model:value="{{ beizhu }}" label="备注" type="textarea" placeholder="请输入备注" autosize input-align="right" maxlength="80" border="{{false}}" />
+</view>
+<view style="text-align: center;opacity: 0;">XDMall</view>
+
+<!-- 底部菜单 -->
+<view class="cartBottom" style="padding-bottom: {{SystemInfo.screenHeight-SystemInfo.safeArea.bottom}}px;">
+    <view class="money">合计: {{totalpay}}元</view>
+    <view class="getIt">
+        <view class="right" bindtap="payit">提交订单</view>
+    </view>
+</view>
+
+<!-- 弹出地址菜单 -->
+<van-popup show="{{ show }}" round custom-style="popup" position="bottom" custom-style="height: 80%" bind:close="onClose">
+    <view class="popup">
+        <view class="selectaddress">选择地址</view>
+        <view class="addressbutton" bindtap="newAddress">地址管理</view>
+        <view class="addressList">
+            <view class="swipe-inner" wx:for="{{addressList}}" wx:key="index" bindtap="selectAddress" data-index="{{index}}">
+                <view class="PCCAdefault">
+                    <view class="tag" wx:if="{{item.default}}">默认</view>
+                    <view class="PCC">
+                        {{item.PCC}}
+                    </view>
+                </view>
+                <view class="detailAddress">
+                    {{item.detailAddress}}
+                </view>
+                <view class="nameAphone">
+                    <view class="sex" style="background-color: {{item.sex === '男' ? '#2196f3' : '#e91e63'}};"></view>
+                    <view class="name">
+                        {{item.name}}
+                    </view>
+                    <view class="phone">
+                        {{item.phone}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</van-popup>
+
+<!-- 确认弹窗 -->
+<van-dialog
+  title="订单信息"
+  show="{{ showd }}"
+  message="订单号: {{orderid}}\n订单金额: {{totalpay}}元\n\n收货人: {{addressList[address]['name']}}\n手机号: {{addressList[address]['phone']}}\n\n收货地址: {{addressList[address]['PCC']+' '+addressList[address]['detailAddress']}}"
+  show-cancel-button
+  confirm-button-text="确认订单"
+  confirm-button-color="#07c160"
+  message-align="left"
+  bind:close="onClosed"
+  bind:confirm="confirmpay"
+/>

@@ -1,0 +1,30 @@
+<!-- 顶部提醒 -->
+<mp-toptips msg="{{info}}" type="{{infotype}}" show="{{info}}"></mp-toptips>
+
+<!-- 编辑区 -->
+<view class="edit">
+    <van-cell-group inset>
+        <van-field model:value="{{ name }}" placeholder="名字" label="收货人" error-message="{{ shrError }}">
+            <van-radio-group direction="horizontal" slot="button" value="{{ sex }}" bind:change="sexChange">
+                <van-radio name="先生" checked-color="#07c160">先生</van-radio>
+                <van-radio name="女士" checked-color="#07c160">女士</van-radio>
+            </van-radio-group>
+        </van-field>
+        <van-field model:value="{{ phone }}" label="联系方式" placeholder="手机号/座机号码" type="number" />
+        <van-field model:value="{{ area }}" label="所在地区" placeholder="请选择" readonly bindtap="selectArea">
+            <van-icon slot="button" name="arrow" />
+        </van-field>
+        <van-field model:value="{{ areaDetail }}" type="textarea" autosize label="详细地址" placeholder="楼/门牌号" />
+        <van-cell title="设为默认地址" center>
+            <van-switch slot="right-icon" checked="{{ defaultArea }}" bind:change="defaultChange" active-color="#07c160" size="24px" />
+        </van-cell>
+    </van-cell-group>
+    <view class="button">
+        <button class="weui-btn" type="primary" bindtap="submitForm">保存</button>
+    </view>
+</view>
+
+<!-- 地址弹窗 -->
+<van-popup show="{{ popShow }}" position="bottom" custom-style="height: 45%;" bind:close="onClose" round>
+    <van-area id="van-area" model:value="{{ areaCode }}" bind:cancel="onClose" bind:confirm="onConfirm" area-list="{{ areaList }}" columns-placeholder="{{ ['请选择', '请选择', '请选择'] }}" />
+</van-popup>

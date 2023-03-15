@@ -1,0 +1,84 @@
+van-tabs {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.inner {
+  position: relative;
+  top: 44px;
+}
+.detail {
+  margin: 12px 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px 0;
+}
+.detail .title {
+  font-size: 16px;
+  margin: 0 12px;
+  padding: 4px 0;
+  border-bottom: #ccc solid 1px;
+  display: flex;
+}
+.detail .title .left {
+  margin-right: auto;
+}
+.detail .title .right {
+  font-weight: bold;
+}
+.detail .products {
+  margin: 0 12px;
+  border-bottom: #ccc solid 1px;
+}
+.detail .products .product {
+  margin: 16px 0;
+  display: flex;
+}
+.detail .products .product image {
+  width: 20%;
+}
+.detail .products .product .goodname {
+  width: 60%;
+  margin: 0 2%;
+  font-size: 14px;
+  color: #333;
+}
+.detail .products .product .pricenum {
+  width: 16%;
+  text-align: right;
+}
+.detail .products .product .pricenum .price {
+  font-weight: bold;
+}
+.detail .otherinfo {
+  margin: 0 12px;
+  font-size: 15px;
+  border-bottom: #ccc solid 1px;
+}
+.detail .otherinfo .arow {
+  display: flex;
+}
+.detail .otherinfo .arow .left {
+  text-align: justify;
+  text-align-last: justify;
+  min-width: 64px;
+  margin-right: 8px;
+}
+.detail .edit {
+  margin: 0 12px;
+}
+.detail .edit .button {
+  text-align: center;
+  width: 60px;
+  margin-top: 6px;
+  margin-left: auto;
+  background-color: #ee0a24;
+  color: #fff;
+  font-size: 14px;
+  padding: 2px 12px 2px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.detail .edit .button:active {
+  background-color: #f13b50;
+}

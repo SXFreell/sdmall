@@ -1,0 +1,68 @@
+<!-- 阴影 -->
+<view class="shadowTaB" />
+
+<!--搜索框 -->
+<mp-searchbar placeholder="15分钟校内极速送达" ext-class="searchbar"></mp-searchbar>
+<!-- <view class="head">
+  <input placeholder="15分钟校内极速送达" bindinput="value"></input>
+  <image src="../images/search.png" bindtap="search"></image>
+</view> -->
+
+<!-- 搜索结果 -->
+<!-- <view class="search" hidden="{{!searching}}">
+  <view class="search_product" wx:for="{{search_product}}" wx:key="index" data-id="{{item._id}}" bindtap="goToProduct">
+    <view class="left">
+      <image src="../images/{{item.limg}}"></image>
+      <text>{{item.name}}</text>
+    </view>
+    <text class="right">￥{{item.saleprice}}</text>
+  </view>
+</view> -->
+
+<!-- 轮播图 -->
+<view class="swiper shadow">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500" style="height:{{height-5}}px;">
+        <block wx:for="{{bannerList}}" wx:key="*this">
+            <swiper-item>
+                <image src="{{item}}" mode="widthFix" bindload="setContainerHeight" class="auto-img" />
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<!-- <swiper indicator-active-color="#3399cc" indicator-dots="true" autoplay="true" interval="2000" indicator-color="white" style="height:{{height}}px;">
+  <swiper-item>
+    <image src="../images/banner0.jpg" mode="widthFix" bindload="setContainerHeight" class="auto-img"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../images/banner1.jpg" mode="widthFix" bindload="setContainerHeight" class="auto-img"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../images/banner2.jpg" mode="widthFix" bindload="setContainerHeight" class="auto-img"></image>
+  </swiper-item>
+</swiper> -->
+
+<!-- 宫格分类入口 -->
+<view class="indexGrid shadow">
+    <view class="gridItem" wx:for="{{gridList}}" wx:key="index" data-name="{{item.name}}" bindtap="selectName">
+        <image src="{{item.img}}"></image>
+        <text>{{item.name}}</text>
+    </view>
+</view>
+
+<!-- 特别推荐 -->
+<view class="tuijian shadow">
+    <view class="text">新品推荐 ></view>
+    <view class="line"></view>
+</view>
+
+<!-- <view class="tuijian" bindtap="BossRecommend">
+    新品推荐 >
+</view> -->
+<!-- <view class="tuijian_1">
+    <view class="product" wx:for="{{array_tuijian}}" wx:key="index">
+        <image src="../images/{{item.limg}}" bindtap="goToProduct" data-id="{{item._id}}"></image>
+        <text class="name">{{item.name}}</text>
+        <text class="price">￥{{item.saleprice}}</text>
+        <text class="add" bindtap="addToShop" data-id="{{item._id}}">+购物车</text>
+    </view>
+</view> -->

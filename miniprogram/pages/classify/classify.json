@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "goods": "../../components/Goods/Goods",
+    "mp-loading": "weui-miniprogram/loading/loading",
+    "van-popup": "/vant/miniprogram_npm/@vant/weapp/popup/index",
+    "van-stepper": "/vant/miniprogram_npm/@vant/weapp/stepper/index"
+  }
+}

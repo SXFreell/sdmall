@@ -1,0 +1,19 @@
+.login {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.login .title {
+  margin-top: 60px;
+  font-size: x-large;
+  font-weight: bold;
+}
+.login .content {
+  margin-top: 16px;
+}
+.login .button {
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 120px;
+}

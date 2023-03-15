@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "van-checkbox": "/vant/miniprogram_npm/@vant/weapp/checkbox/index",
+        "van-checkbox-group": "/vant/miniprogram_npm/@vant/weapp/checkbox-group/index",
+        "van-swipe-cell": "/vant/miniprogram_npm/@vant/weapp/swipe-cell/index",
+        "van-cell": "/vant/miniprogram_npm/@vant/weapp/cell/index",
+        "van-cell-group": "/vant/miniprogram_npm/@vant/weapp/cell-group/index",
+        "van-stepper": "/vant/miniprogram_npm/@vant/weapp/stepper/index"
+    }
+}

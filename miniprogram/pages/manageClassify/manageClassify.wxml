@@ -1,0 +1,21 @@
+<!-- XuShuoYYDS -->
+
+<view class="box">
+    <view class="item" style="font-weight: bold;">
+        <view class="col col1">序号</view>
+        <view class="col col2">分类名称</view>
+        <view class="col col3">最大ID</view>
+        <view class="col col4">
+            <button type="primary" size="mini" bindtap="addClassify">增加分类</button>
+        </view>
+    </view>
+    <view class="item" wx:for="{{classifyList}}" wx:key="index">
+        <view class="col col1">{{item.classifyId}}</view>
+        <view class="col col2">{{item.classifyName}}</view>
+        <view class="col col3">{{item.maxCode}}</view>
+        <view class="col col4">
+            <button class="b1" data-index="{{index}}" type="primary" size="mini" bindtap="editClassify">修改</button>
+            <button class="b2" data-index="{{index}}" type="primary" size="mini" bindtap="deleteClassify">删除</button>
+        </view>
+    </view>
+</view>

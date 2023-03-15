@@ -1,0 +1,37 @@
+<view>
+  <view class="top">
+    <view>
+      订单配送至
+      <view>{{array.address}}</view>
+    </view>
+    <view>{{array.realname}}</view>
+    <view>{{array.phone}} {{array.mobilephone}}</view>
+  </view>
+  
+  <view class="fenge">
+    <view class="buju">
+      <view class="bold">商品</view>
+      <view class="bold right">{{product.length}}件</view>
+    </view>
+    <view class="show" wx:for="{{product}}" wx:key="index">
+      <view class="tu">
+        <image src="../images/{{item.beizhu1}}"></image>
+        <view class="tutext">
+          <view>{{item.goods_name}}</view>
+          <view>￥{{item.goods_price}}</view>
+        </view>
+      </view>
+      <view>x{{item.goods_number}}</view>
+    </view>
+  </view>
+  <view class="buju">
+    <view class="bold">合计</view>
+    <view class="right">￥{{allMoney}}</view>
+  </view>
+  <view class="buju bold bottom">
+    <view>合计
+      <view class="qian">￥{{allMoney}}</view>
+    </view>
+    <view  class="zhifu" bindtap="pay">确定购买</view>
+  </view>
+</view>

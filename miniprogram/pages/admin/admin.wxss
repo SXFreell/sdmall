@@ -1,0 +1,12 @@
+.weui-cells__title {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.72);
+  position: relative;
+  left: -8px;
+}
+.cells {
+  margin: 0 16px 0 16px;
+}
+.cells .weui-cells {
+  border-radius: 10px;
+}

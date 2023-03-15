@@ -1,0 +1,7 @@
+{
+  "desc": "石大迅达商城",
+  "rules": [{
+    "action": "allow",
+    "page": "*"
+  }]
+}

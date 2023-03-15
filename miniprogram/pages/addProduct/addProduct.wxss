@@ -1,0 +1,15 @@
+page {
+  background-color: white;
+}
+.addMain .weui-form {
+  padding-top: 32px;
+}
+.addMain .weui-form .weui-form__control-area {
+  margin-top: 16px;
+}
+.addMain .weui-form .weui-form__opr-area {
+  margin: 0;
+}
+.addMain .uploadImg .weui-cell {
+  padding: 16px;
+}
